@@ -33,7 +33,7 @@ jobs:
         cache: 'pnpm'
     - name: Build
       run: pnpm install
-    - run: npm publish
+    - run: pnpm publish --access publish
       if: ${{ steps.release.outputs.release_created }}
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
