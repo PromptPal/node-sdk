@@ -1,8 +1,10 @@
 name: Publish
 on:
-  push:
-    tags: 
-      - '*'
+   push:
+     branches:
+       - master
+  #   tags: 
+  #     - '*'
 permissions:
   contents: write
   pull-requests: write
