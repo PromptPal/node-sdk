@@ -5,17 +5,23 @@ on:
        - master
   #   tags: 
   #     - '*'
-permissions:
-  contents: write
-  pull-requests: write
-
+permissions: {}
 jobs:
-  build:
+  publish:
+    permissions:
+      contents: write # to create release commit (google-github-actions/release-please-action)
+      pull-requests: write # to create release PR (google-github-actions/release-please-action)
     runs-on: ubuntu-20.04
     strategy:
       matrix:
         node-version: [18.x]
     steps:
+    - uses: google-github-actions/release-please-action@v3
+      id: release
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        release-type: node
+        package-name: '@prompt-pal/node-sdk'
     - uses: actions/checkout@v3
     - uses: pnpm/action-setup@v2
       with:
@@ -27,11 +33,6 @@ jobs:
         cache: 'pnpm'
     - name: Build
       run: pnpm install
-    - uses: google-github-actions/release-please-action@v3
-      id: release
-      with:
-        release-type: node
-        package-name: '@prompt-pal/node-sdk'
     - run: npm publish
       if: ${{ steps.release.outputs.release_created }}
       env:
