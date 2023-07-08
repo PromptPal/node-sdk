@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "the Node.js SDK for PromptPal",
   "main": "dist/index.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "AnnatarHe<annatar.he+github@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
 }
