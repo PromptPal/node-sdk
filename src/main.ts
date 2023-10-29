@@ -1,1 +1,2 @@
-export * from './client'
+import PromptPalClient from './client'
+export default PromptPalClient
