@@ -4,6 +4,7 @@ export default defineConfig({
   test: {
     setupFiles: ['./mocks/setup.ts'],
     coverage: {
+      include: ['src/**/*.ts'],
       provider: 'v8'
     }
   },

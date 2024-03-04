@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import PromptPalClient from './client'
+import PromptPalClient from './main'
 
 test('client should execute correctly', async () => {
   const c = new PromptPalClient('http://127.0.0.1:8964', 'token')
