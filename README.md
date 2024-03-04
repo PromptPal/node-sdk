@@ -1,4 +1,4 @@
-# PromptPal Node.js SDK [![Publish](https://github.com/PromptPal/node-sdk/actions/workflows/publish.yaml/badge.svg)](https://github.com/PromptPal/node-sdk/actions/workflows/publish.yaml)
+# PromptPal Node.js SDK [![Publish](https://github.com/PromptPal/node-sdk/actions/workflows/publish.yaml/badge.svg)](https://github.com/PromptPal/node-sdk/actions/workflows/publish.yaml) [![codecov](https://codecov.io/gh/PromptPal/node-sdk/graph/badge.svg?token=X64BHIHS97)](https://codecov.io/gh/PromptPal/node-sdk)
 
 PromptPal is a software application designed to facilitate the collection, storage, modification, and enhancement of prompts.
 
@@ -8,12 +8,13 @@ The Node.js SDK is a powerful tool that enables seamless integration with the Pr
 
 ## Installation
 
-To install the PromptPal Node.js SDK, use the following npm command:
+The PromptPal JS SDK is all environment compatible, including Node.js, Deno and Bun. To install the SDK, use the following command:
 
 ```bash
 npm install @prompt-pal/node-sdk
 yarn add @prompt-pal/node-sdk
 pnpm install @prompt-pal/node-sdk
+deno add @prompt-pal/node-sdk
 ```
 
 ## Usage
