@@ -1,39 +1,44 @@
 name: Publish
 on:
-   push:
-     branches:
-       - master
-  #   tags: 
+  push:
+    branches:
+      - master
+  #   tags:
   #     - '*'
 permissions: {}
 jobs:
   publish:
     permissions:
       contents: write # to create release commit (google-github-actions/release-please-action)
+      # contents: read
       pull-requests: write # to create release PR (google-github-actions/release-please-action)
+      id-token: write
     runs-on: ubuntu-20.04
     strategy:
       matrix:
         node-version: [18.x]
     steps:
-    - uses: google-github-actions/release-please-action@v3
-      id: release
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        release-type: node
-        package-name: '@prompt-pal/node-sdk'
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2
-      with:
-        version: 8
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
-    - name: Build
-      run: pnpm install
-    - run: pnpm publish --access publish
-      if: ${{ steps.release.outputs.release_created }}
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
+          package-name: "@prompt-pal/node-sdk"
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+      - name: Build
+        run: pnpm install
+      - run: pnpm publish --access publish
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Publish package
+        if: ${{ steps.release.outputs.release_created }}
+        run: pnpm dlx jsr publish

@@ -35,7 +35,6 @@ class PromptPalClient {
     })
   }
 
-
   async execute<P extends string, V extends object>(prompt: P, variables: V, userId?: string) {
     const signal = AbortSignal.timeout(10_000)
     return this.httpPost<APIRunPromptResponse, APIRunPromptPayload<V>>(
@@ -44,7 +43,8 @@ class PromptPalClient {
         variables,
         userId
       },
-      signal)
+      signal
+    )
   }
 }
 
