@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/PromptPal/node-sdk/compare/v0.1.1...v0.1.2) (2024-03-04)
+
+
+### Bug Fixes
+
+* **npm:** fix npm entry file ([b5928e7](https://github.com/PromptPal/node-sdk/commit/b5928e7dbbd154f2cafc341a45f86b346b207f4e))
+* **ts:** fix slow types issue that jsr raised ([94b17d3](https://github.com/PromptPal/node-sdk/commit/94b17d336c708f6263effbe6d877c148ce58a73c))
+
 ## [0.1.1](https://github.com/PromptPal/node-sdk/compare/v0.1.0...v0.1.1) (2024-03-04)
 
 
