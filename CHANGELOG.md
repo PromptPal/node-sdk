@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/PromptPal/node-sdk/compare/v0.1.0...v0.1.1) (2024-03-04)
+
+
+### Bug Fixes
+
+* **ci:** fix ci issue that could not publish to npm and jsr ([08ffc3f](https://github.com/PromptPal/node-sdk/commit/08ffc3fe490f51ba9bd1359515099ae6bc116f6a))
+
 ## [0.1.0](https://github.com/PromptPal/node-sdk/compare/v0.0.5...v0.1.0) (2024-03-04)
 
 
