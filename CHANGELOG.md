@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/PromptPal/node-sdk/compare/v0.1.2...v0.1.3) (2024-03-04)
+
+
+### Bug Fixes
+
+* **docs:** add docs for project ([7e8ed92](https://github.com/PromptPal/node-sdk/commit/7e8ed92242d3478f0ebb1f1eec7003e5ea1a7cb5))
+
 ## [0.1.2](https://github.com/PromptPal/node-sdk/compare/v0.1.1...v0.1.2) (2024-03-04)
 
 
