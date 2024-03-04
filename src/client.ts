@@ -11,7 +11,7 @@ class PromptPalClient {
     this.token = token;
   }
 
-  protected httpPost<R, V extends object>(url: string, data: V, signal?: AbortSignal) {
+  protected httpPost<R, V extends object>(url: string, data: V, signal?: AbortSignal): Promise<R> {
     if (!this.token) {
       throw new Error('PromptPal: No token found')
     }
@@ -34,9 +34,15 @@ class PromptPalClient {
       return response.json() as R
     })
   }
-
-  async execute<P extends string, V extends object>(prompt: P, variables: V, userId?: string) {
-    const signal = AbortSignal.timeout(10_000)
+  execute<P extends string, V extends object>(
+    prompt: P,
+    variables: V,
+    userId?: string,
+    config?: {
+      signal?: AbortSignal
+    }
+  ): Promise<APIRunPromptResponse> {
+    const signal = config?.signal ?? AbortSignal.timeout(10_000)
     return this.httpPost<APIRunPromptResponse, APIRunPromptPayload<V>>(
       PromptPalClient.executePath.replace('{pid}', prompt),
       {
