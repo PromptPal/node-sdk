@@ -1,5 +1,9 @@
 {
   "name": "@prompt-pal/node-sdk",
   "version": "0.1.2",
-  "exports": "./src/main.ts"
+  "exports": "./src/main.ts",
+  "exclude": [
+    "mocks/**",
+    "src/**/*.test.ts"
+  ]
 }
