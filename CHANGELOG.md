@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/PromptPal/node-sdk/compare/v0.1.3...v0.1.4) (2024-03-06)
+
+
+### Bug Fixes
+
+* **types:** add configuration type ([e55aa1b](https://github.com/PromptPal/node-sdk/commit/e55aa1b1aa8a654fac21664445ce117d708ca8b8))
+
 ## [0.1.3](https://github.com/PromptPal/node-sdk/compare/v0.1.2...v0.1.3) (2024-03-04)
 
 
