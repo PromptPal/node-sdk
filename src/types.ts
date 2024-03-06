@@ -17,7 +17,7 @@ export type APIRunPromptResponse = {
 /** 
  * the `promptpal.yaml` configuration type
  * ```ts
- * import { Configuration } from "@prompt-pal/node-sdk"
+ * import { type Configuration } from "@prompt-pal/node-sdk"
  * import { parse } from "@std/yaml"
  * const config = parse(await Deno.readTextFile("./promptpal.yml")) as Configuration
  * ```
