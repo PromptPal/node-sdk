@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/PromptPal/node-sdk/compare/v0.1.4...v0.1.5) (2024-03-06)
+
+
+### Bug Fixes
+
+* **types:** update types info for deno ([5503cde](https://github.com/PromptPal/node-sdk/commit/5503cdefeed46df80a0da711d95c500fd6642ddf))
+
 ## [0.1.4](https://github.com/PromptPal/node-sdk/compare/v0.1.3...v0.1.4) (2024-03-06)
 
 
