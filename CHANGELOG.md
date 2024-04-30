@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6](https://github.com/PromptPal/node-sdk/compare/v0.1.5...v0.1.6) (2024-04-30)
+
+
+### Bug Fixes
+
+* **client:** add user agent info to client ([0ac7b3b](https://github.com/PromptPal/node-sdk/commit/0ac7b3b37c8efb7319a644a443c26274dbe6744d))
+
 ## [0.1.5](https://github.com/PromptPal/node-sdk/compare/v0.1.4...v0.1.5) (2024-03-06)
 
 
