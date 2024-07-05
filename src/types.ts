@@ -42,3 +42,27 @@ export type Configuration = {
     }
   }
 }
+
+export type RuntimeOptions = {
+  /**
+   * runtime cache for the PromptPal Node.js SDK
+   * 
+   * @default Map struct
+   * if `null`, the cache is disabled
+   * you also can use any implementation that implements the `Cache` interface
+   */
+  cache?: Cache | null
+  defaultTimeout?: number
+}
+
+/**
+ * cache interface
+ * default is a `Map`
+ */
+export interface Cache {
+  get(key: string): string | undefined
+  set(key: string, value: string): void
+  has(key: string): boolean
+  delete(key: string): void
+  clear(): void
+}
