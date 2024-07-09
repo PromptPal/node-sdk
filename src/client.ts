@@ -5,7 +5,6 @@ import {
   RuntimeOptions,
   Cache,
   StreamEvents,
-  APIChunkResponse,
 } from "./types";
 
 /**
@@ -81,7 +80,7 @@ class PromptPalClient {
   protected async httpPostStream<R, V extends object>(
     url: string,
     data: V,
-    events: StreamEvents<APIChunkResponse>,
+    events: StreamEvents<APIRunPromptResponse>,
     signal?: AbortSignal,
   ): Promise<R> {
     if (!this.token) {
@@ -116,7 +115,7 @@ class PromptPalClient {
       const { done, value } = await reader.read();
       const str = new TextDecoder("utf-8").decode(value);
       if (str) {
-        const c = JSON.parse(str) as APIChunkResponse;
+        const c = JSON.parse(str) as APIRunPromptResponse;
         events.onData(c);
       }
       if (done) {
@@ -219,7 +218,7 @@ class PromptPalClient {
       if (config?.onData) {
         config.onData(chunk);
       }
-      return Promise.resolve();
+      return Promise.resolve(chunk);
     }
 
     await this.httpPostStream<APIRunPromptResponse, APIRunPromptPayload<V>>(
