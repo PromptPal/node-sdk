@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.2.0](https://github.com/PromptPal/node-sdk/compare/v0.1.6...v0.2.0) (2024-07-11)
+
+
+### Features
+
+* **cache:** add a simple cache ([6ed963a](https://github.com/PromptPal/node-sdk/commit/6ed963a0d8dd8482e584392ca147851dbea561b4))
+* **streaming:** add streaming api support ([fba72e8](https://github.com/PromptPal/node-sdk/commit/fba72e89128461416e807951603d3418fa56f084))
+* **streaming:** update streaming api support ([8e0a762](https://github.com/PromptPal/node-sdk/commit/8e0a762fc27f6c1b19fe343ace5e4977dd5592da))
+
+
+### Bug Fixes
+
+* **stream:** fix type errors ([8e9dd84](https://github.com/PromptPal/node-sdk/commit/8e9dd84c6a1459cb139ddc4e8079b390f6dd23d5))
+
 ## [0.1.6](https://github.com/PromptPal/node-sdk/compare/v0.1.5...v0.1.6) (2024-04-30)
 
 
