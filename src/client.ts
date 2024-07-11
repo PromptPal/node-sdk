@@ -114,8 +114,8 @@ class PromptPalClient {
     while (true) {
       const { done, value } = await reader.read();
       const str = new TextDecoder("utf-8").decode(value);
-      if (str) {
-        const c = JSON.parse(str) as APIRunPromptResponse;
+      if (str && str.startsWith("data:")) {
+        const c = JSON.parse(str.slice(5)) as APIRunPromptResponse;
         events.onData(c);
       }
       if (done) {

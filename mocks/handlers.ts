@@ -39,9 +39,16 @@ export const handlers = [
       const stream = new ReadableStream({
         start(controller) {
           // Encode the string chunks using "TextEncoder".
-          controller.enqueue(encoder.encode(JSON.stringify(chunks[0])));
-          controller.enqueue(encoder.encode(JSON.stringify(chunks[1])));
-          controller.enqueue(encoder.encode(JSON.stringify(chunks[2])));
+          controller.enqueue(encoder.encode("event:message"));
+          controller.enqueue(
+            encoder.encode("data:" + JSON.stringify(chunks[0])),
+          );
+          controller.enqueue(
+            encoder.encode("data:" + JSON.stringify(chunks[1])),
+          );
+          controller.enqueue(
+            encoder.encode("data:" + JSON.stringify(chunks[2])),
+          );
           controller.close();
         },
       });
