@@ -183,10 +183,13 @@ class PromptPalClient {
    * execute a prompt
    *
    * ```ts
-   * const res = client.execute<PPPrompts, PPPromptEchoVariables>(
+   * const res = client.executeStream<PPPrompts, PPPromptEchoVariables>(
    *  PPPrompts.Echo,
-   *  { text: 'hello world' }
-   * )
+   *  { text: 'hello world' },
+   *  '123',
+   *  {
+   *    onData: console.log
+   *   })
    * ```
    *
    * @param prompt prompt hash id
