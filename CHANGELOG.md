@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/PromptPal/node-sdk/compare/v0.2.0...v0.2.1) (2024-07-12)
+
+
+### Bug Fixes
+
+* **ci:** fix ci ([85b1b7b](https://github.com/PromptPal/node-sdk/commit/85b1b7bd390a5ecb6cc99bf289d1f1db98251fff))
+
 ## [0.2.0](https://github.com/PromptPal/node-sdk/compare/v0.1.6...v0.2.0) (2024-07-11)
 
 
