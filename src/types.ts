@@ -17,6 +17,7 @@ export type APIRunPromptResponse = {
 export interface StreamEvents<C extends object> {
   onData(chunk: C): Promise<C>;
   onEnd(chunk?: C): Promise<C>;
+  onError?: (err?: C) => Promise<C>;
 }
 
 /**
