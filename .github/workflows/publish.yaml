@@ -61,4 +61,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish to JSR
         if: ${{ steps.release.outputs.release_created }}
-        run: pnpm dlx jsr publish
+        run: pnpm dlx jsr publish --allow-dirty
