@@ -27,7 +27,7 @@ test("client should call streaming execute correctly", async () => {
   expect(res).toBeTruthy();
 
   expect(res?.id).toBe("2");
-  expect(res?.message).toBe("msg3");
+  expect(res?.message).toBe("msg1msg2msg3");
   expect(res?.tokenCount).toBe(-1);
   expect(onData).toBeCalledTimes(3);
   expect(onEnd).toBeCalledTimes(1);

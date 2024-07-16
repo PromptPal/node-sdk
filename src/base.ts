@@ -108,6 +108,7 @@ class BaseClient {
     }
 
     const result: string[] = []
+    let lastId: string = ''
 
     while (true) {
       const { done, value } = await reader.read();
@@ -116,6 +117,7 @@ class BaseClient {
       const rawMsgs = str.split("\n").filter(s => s.startsWith('data:')).map(x => x.trim())
       rawMsgs.forEach(msg => {
         const c = JSON.parse(msg.slice(5)) as APIRunPromptResponse;
+        lastId = c.id
         result.push(c.message)
         events.onData(c);
       })
@@ -127,7 +129,7 @@ class BaseClient {
     }
 
     return {
-      id: '',
+      id: lastId,
       message: result.join(''),
       tokenCount: -1,
     }
