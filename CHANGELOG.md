@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.5](https://github.com/PromptPal/node-sdk/compare/v0.2.4...v0.2.5) (2024-07-16)
+
+
+### Bug Fixes
+
+* **ci:** publish to jsr anyway ([542bf51](https://github.com/PromptPal/node-sdk/commit/542bf5163617b6dbf7d371d8102a67087e145e3b))
+
 ## [0.2.4](https://github.com/PromptPal/node-sdk/compare/v0.2.3...v0.2.4) (2024-07-16)
 
 
