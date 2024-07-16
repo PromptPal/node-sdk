@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.4](https://github.com/PromptPal/node-sdk/compare/v0.2.3...v0.2.4) (2024-07-16)
+
+
+### Bug Fixes
+
+* **ci:** upgrade jsr version when release ([215b956](https://github.com/PromptPal/node-sdk/commit/215b956366d0afa3c70908d664066db40514a8ed))
+
 ## [0.2.3](https://github.com/PromptPal/node-sdk/compare/v0.2.2...v0.2.3) (2024-07-16)
 
 
