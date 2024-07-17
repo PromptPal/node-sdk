@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/PromptPal/node-sdk/compare/v0.2.5...v0.3.0) (2024-07-17)
+
+
+### Features
+
+* **cache:** support server cache response ([3ae7e33](https://github.com/PromptPal/node-sdk/commit/3ae7e33508b7e71871d587d17bd75846bf6ec2e4))
+
 ## [0.2.5](https://github.com/PromptPal/node-sdk/compare/v0.2.4...v0.2.5) (2024-07-16)
 
 
