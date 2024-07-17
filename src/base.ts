@@ -101,6 +101,14 @@ class BaseClient {
       signal,
     })
 
+    if (response.headers.get('Content-Type')?.includes('application/json')) {
+      const val = await response.json() as APIRunPromptResponse
+      if (events.onEnd) {
+        events.onEnd(val)
+      }
+      return val
+    }
+
     const reader = response.body?.getReader();
 
     if (!reader) {
