@@ -74,7 +74,7 @@ class BaseClient {
     const temporaryToken = await this.ensureTemporaryToken({ signal: signal })
 
     if (temporaryToken.token) {
-      headers[BaseClient.TEMPORARY_TOKEN_HEADER] = `Bearer ${temporaryToken.token}`
+      headers[BaseClient.TEMPORARY_TOKEN_HEADER] = temporaryToken.token
     }
 
     const response = await fetch(requestURL, {
