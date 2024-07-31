@@ -2,10 +2,7 @@ import BaseClient from "./base";
 import {
   APIRunPromptPayload,
   APIRunPromptResponse,
-  ErrorResponse,
   RuntimeOptions,
-  Cache,
-  StreamEvents,
 } from "./types";
 
 /**

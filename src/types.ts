@@ -8,6 +8,12 @@ export type APIRunPromptPayload<V extends object> = {
   userId?: string;
 };
 
+export type ApplyTemporaryTokenResult = {
+  token: string
+  limit: number
+  remaining: number
+}
+
 export type APIRunPromptResponse = {
   id: string;
   message: string;
@@ -59,6 +65,7 @@ export type RuntimeOptions = {
    */
   cache?: Cache | null;
   defaultTimeout?: number;
+  applyTemporaryToken?: (ctx: { signal?: AbortSignal }) => Promise<ApplyTemporaryTokenResult>;
 };
 
 /**
