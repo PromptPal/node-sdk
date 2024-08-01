@@ -1,1 +1,1 @@
-{ "name": "@prompt-pal/node-sdk", "version": "0.4.1", "exports": "./src/main.ts", "exclude": [ "mocks/**", "src/**/*.test.ts" ] }
+{ "name": "@prompt-pal/node-sdk", "version": "0.4.2", "exports": "./src/main.ts", "exclude": [ "mocks/**", "src/**/*.test.ts" ] }
