@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/PromptPal/node-sdk/compare/v0.4.0...v0.4.1) (2024-08-01)
+
+
+### Bug Fixes
+
+* **stream:** fix streaming api handler ([f653b78](https://github.com/PromptPal/node-sdk/commit/f653b7842e348d246fa940859a77534d3df125c2))
+
 ## [0.4.0](https://github.com/PromptPal/node-sdk/compare/v0.3.0...v0.4.0) (2024-08-01)
 
 
