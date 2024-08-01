@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.4.0](https://github.com/PromptPal/node-sdk/compare/v0.3.0...v0.4.0) (2024-08-01)
+
+
+### Features
+
+* **openToken:** add temporary token support ([324b5b7](https://github.com/PromptPal/node-sdk/commit/324b5b795f386d060d57f5d13ebc2b97cf85b4e5))
+
+
+### Bug Fixes
+
+* **openToken:** remove Bearer in temporary token header ([ca642b8](https://github.com/PromptPal/node-sdk/commit/ca642b8cdfe2cf861ed6e67a6eb6d3bc1c17d287))
+
 ## [0.3.0](https://github.com/PromptPal/node-sdk/compare/v0.2.5...v0.3.0) (2024-07-17)
 
 
