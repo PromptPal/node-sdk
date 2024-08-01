@@ -138,29 +138,27 @@ class BaseClient {
     const result: string[] = []
     let lastId: string = ''
 
-    while (true) {
-      const { done, value } = await reader.read();
-      // event:message\ndata:{"id":"dgJe7a8WGVZj","message":"안녕하세요","tokenCount":-1}\n\n
-      const str = new TextDecoder("utf-8").decode(value)
-      const rawMsgs = str.split("\n").filter(s => s.startsWith('data:')).map(x => x.trim())
-      rawMsgs.forEach(msg => {
-        const c = JSON.parse(msg.slice(5)) as APIRunPromptResponse;
-        lastId = c.id
-        result.push(c.message)
-        events.onData(c);
-      })
+    return new Promise(async (resolve, reject) => {
+      while (true) {
+        const { done, value } = await reader.read();
+        // event:message\ndata:{"id":"dgJe7a8WGVZj","message":"안녕하세요","tokenCount":-1}\n\n
+        const str = new TextDecoder("utf-8").decode(value)
+        const rawMsgs = str.split("\n").filter(s => s.startsWith('data:')).map(x => x.trim())
 
-      if (done) {
-        events.onEnd()
-        break
+        rawMsgs.forEach(msg => {
+          const c = JSON.parse(msg.slice(5)) as APIRunPromptResponse;
+          lastId = c.id
+          result.push(c.message)
+          events.onData(c);
+        })
+
+        if (done) {
+          resolve({ id: lastId, message: result.join(''), tokenCount: -1 })
+          events.onEnd()
+          break
+        }
       }
-    }
-
-    return {
-      id: lastId,
-      message: result.join(''),
-      tokenCount: -1,
-    }
+    })
   }
 
   protected getCacheKey(prompt: string, variables: Record<string, any>): string {

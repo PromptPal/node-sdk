@@ -3,6 +3,10 @@ import { APIRunPromptResponse } from "../src/types";
 
 const encoder = new TextEncoder();
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 // Define handlers that catch the corresponding requests and returns the mock data.
 export const handlers = [
   http.post("http://127.0.0.1:7788/api/v1/public/prompts/run/PROMPT_ID", () => {
@@ -36,28 +40,26 @@ export const handlers = [
         },
       ];
 
-      const stream = new ReadableStream({
+      const stream = new ReadableStream<Uint8Array>({
         start(controller) {
           // Encode the string chunks using "TextEncoder".
           controller.enqueue(encoder.encode("event:message"));
-          controller.enqueue(
-            encoder.encode("data:" + JSON.stringify(chunks[0])),
-          );
-          controller.enqueue(
-            encoder.encode("data:" + JSON.stringify(chunks[1])),
-          );
-          controller.enqueue(
-            encoder.encode("data:" + JSON.stringify(chunks[2])),
-          );
-          controller.close();
+          controller.enqueue(encoder.encode("data:" + JSON.stringify(chunks[0])))
+          sleep(100).then(() => {
+            controller.enqueue(encoder.encode("data:" + JSON.stringify(chunks[1])))
+            return sleep(100)
+          }).then(() => {
+            controller.enqueue(encoder.encode("data:" + JSON.stringify(chunks[2])))
+            return sleep(100)
+          }).then(() => {
+            controller.close();
+          })
         },
       });
 
       // Send the mocked response immediately.
       return new HttpResponse(stream, {
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: {},
       });
     },
   ),
