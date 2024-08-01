@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.2](https://github.com/PromptPal/node-sdk/compare/v0.4.1...v0.4.2) (2024-08-01)
+
+
+### Bug Fixes
+
+* **types:** fix types syntax ([9a832d1](https://github.com/PromptPal/node-sdk/commit/9a832d12588c88501317b72395b062065b82802a))
+
 ## [0.4.1](https://github.com/PromptPal/node-sdk/compare/v0.4.0...v0.4.1) (2024-08-01)
 
 
