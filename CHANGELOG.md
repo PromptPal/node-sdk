@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.3](https://github.com/PromptPal/node-sdk/compare/v0.4.2...v0.4.3) (2024-08-03)
+
+
+### Bug Fixes
+
+* **stream:** disable buffering in nginx by header setting ([d6b36c3](https://github.com/PromptPal/node-sdk/commit/d6b36c38af4d15fac96af85a84381b70599a9852))
+
 ## [0.4.2](https://github.com/PromptPal/node-sdk/compare/v0.4.1...v0.4.2) (2024-08-01)
 
 
