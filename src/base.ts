@@ -77,6 +77,12 @@ class BaseClient {
       headers[BaseClient.TEMPORARY_TOKEN_HEADER] = temporaryToken.token
     }
 
+    // add streaming header if the url ends with `/stream`
+    if (requestURL.endsWith('/stream')) {
+      headers['Accept'] = 'text/event-stream'
+      headers['X-Accel-Buffering'] = 'no'
+    }
+
     const response = await fetch(requestURL, {
       method: "POST",
       headers,
