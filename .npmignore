@@ -3,6 +3,7 @@ src/
 coverage/
 mocks/
 
+*.tsbuildinfo
 .github
 .editorconfig
 CHANGELOG.md
