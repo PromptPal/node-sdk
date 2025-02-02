@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.5](https://github.com/PromptPal/node-sdk/compare/v0.4.4...v0.4.5) (2025-02-02)
+
+
+### Bug Fixes
+
+* **node:** upgrade node to 23 ([1d09324](https://github.com/PromptPal/node-sdk/commit/1d09324be0746d2dc0d2cab1854f2a8d41897245))
+* **npm:** move the file names that should be ignored in npm from git ([dd6cbe3](https://github.com/PromptPal/node-sdk/commit/dd6cbe3281350aeb925eb8d034882501f0185e11))
+
 ## [0.4.4](https://github.com/PromptPal/node-sdk/compare/v0.4.3...v0.4.4) (2025-02-02)
 
 
