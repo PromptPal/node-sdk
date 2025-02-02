@@ -2,3 +2,8 @@ src/
 .github/
 coverage/
 mocks/
+
+.github
+.editorconfig
+CHANGELOG.md
+vitest.config.ts
