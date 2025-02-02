@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.4](https://github.com/PromptPal/node-sdk/compare/v0.4.3...v0.4.4) (2025-02-02)
+
+
+### Bug Fixes
+
+* **build:** ignore some files in bundle because of the issue 😂 https://github.com/TencentCloud/tencentcloud-sdk-nodejs/issues/160 ([e7a0c8b](https://github.com/PromptPal/node-sdk/commit/e7a0c8b4625c32284c45646f5565577ce327349c))
+
 ## [0.4.3](https://github.com/PromptPal/node-sdk/compare/v0.4.2...v0.4.3) (2024-08-03)
 
 

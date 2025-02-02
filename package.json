@@ -1,6 +1,6 @@
 {
   "name": "@prompt-pal/node-sdk",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "the Node.js SDK for PromptPal",
   "main": "dist/main.js",
   "engines": {
