@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.6](https://github.com/PromptPal/node-sdk/compare/v0.4.5...v0.4.6) (2025-02-10)
+
+
+### Bug Fixes
+
+* **npm:** ignore tsbuild info in dist ([e70d68c](https://github.com/PromptPal/node-sdk/commit/e70d68c07a07a5e8922d8bba544466912b5aa273))
+* **stream:** add error handling on stream api ([5162c9d](https://github.com/PromptPal/node-sdk/commit/5162c9dabecb70c7dacddf9f0ce12c3ac3fec9a5))
+
 ## [0.4.5](https://github.com/PromptPal/node-sdk/compare/v0.4.4...v0.4.5) (2025-02-02)
 
 
