@@ -1,1 +1,1 @@
-{ "name": "@prompt-pal/node-sdk", "version": "0.4.5", "exports": "./src/main.ts", "exclude": [ "mocks/**", "src/**/*.test.ts", ".github/", ".editorconfig", "CHANGELOG.md", "vitest.config.ts" ] }
+{ "name": "@prompt-pal/node-sdk", "version": "0.4.6", "exports": "./src/main.ts", "exclude": [ "mocks/**", "src/**/*.test.ts", ".github/", ".editorconfig", "CHANGELOG.md", "vitest.config.ts" ] }
