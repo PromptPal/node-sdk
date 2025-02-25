@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.7](https://github.com/PromptPal/node-sdk/compare/v0.4.6...v0.4.7) (2025-02-25)
+
+
+### Bug Fixes
+
+* **ci:** upgrade ci runner to latest of ubuntu ([061dc32](https://github.com/PromptPal/node-sdk/commit/061dc3227256163b83455f4192a83c6f2166e500))
+* **stream:** do not stop stream parser if got error ([8215998](https://github.com/PromptPal/node-sdk/commit/8215998d0f6d0200cbb1a15171e066a03dad3234))
+
 ## [0.4.6](https://github.com/PromptPal/node-sdk/compare/v0.4.5...v0.4.6) (2025-02-10)
 
 
