@@ -161,7 +161,6 @@ class BaseClient {
           } catch (e) {
             console.info(temp)
             console.error(e)
-            done = true
           }
         })
 
