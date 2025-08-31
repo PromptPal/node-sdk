@@ -61,6 +61,7 @@ class PromptPalClient extends BaseClient {
         userId,
       },
       signal,
+      userId,
     );
     this.cache?.set(cacheKey, JSON.stringify(result));
     return result;
@@ -114,6 +115,7 @@ class PromptPalClient extends BaseClient {
         onError: config?.onError,
       },
       signal,
+      userId,
     )
 
     this.cache?.set(cacheKey, JSON.stringify(finalResult))

@@ -57,11 +57,12 @@ class BaseClient {
     url: string,
     data: V,
     signal?: AbortSignal,
+    userId?: string,
   }) {
     if (!this.token) {
       throw new Error("PromptPal: No token found")
     }
-    const { url, data, signal } = params
+    const { url, data, signal, userId } = params
 
     const requestURL = url.startsWith("http") ? url : `${this.endpoint}${url}`
 
@@ -75,6 +76,10 @@ class BaseClient {
 
     if (temporaryToken.token) {
       headers[BaseClient.TEMPORARY_TOKEN_HEADER] = temporaryToken.token
+    }
+
+    if (userId) {
+      headers['X-User-Id'] = userId
     }
 
     // add streaming header if the url ends with `/stream`
@@ -102,11 +107,13 @@ class BaseClient {
     url: string,
     data: V,
     signal?: AbortSignal,
+    userId?: string,
   ): Promise<R> {
     const response = await this.doPost({
       url,
       data,
       signal,
+      userId,
     })
     if (!this.token) {
       throw new Error("PromptPal: No token found")
@@ -120,11 +127,13 @@ class BaseClient {
     data: V,
     events: StreamEvents<APIRunPromptResponse>,
     signal?: AbortSignal,
+    userId?: string,
   ): Promise<APIRunPromptResponse> {
     const response = await this.doPost({
       url,
       data,
       signal,
+      userId,
     })
 
     if (response.headers.get('Content-Type')?.includes('application/json')) {
@@ -175,9 +184,9 @@ class BaseClient {
 
   protected getCacheKey(prompt: string, variables: Record<string, any>): string {
     let result = prompt + ":";
-    const vars = Object.values(variables);
+    const vars = Object.keys(variables).map(key => variables[key]);
     vars.sort();
-    vars.forEach((value) => {
+    vars.forEach((value: any) => {
       if (typeof value === "object") {
         // TODO, not support complex types
         return result + Math.random();
