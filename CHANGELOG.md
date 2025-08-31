@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.4.8](https://github.com/PromptPal/node-sdk/compare/v0.4.7...v0.4.8) (2025-08-31)
+
+
+### Features
+
+* **claude:** add Claude Code settings and workflow permissions ([b869d92](https://github.com/PromptPal/node-sdk/commit/b869d92652ba7b1d2b8853f6e3c616e289b62e35))
+* **client:** add X-User-Id header support ([3e86fc2](https://github.com/PromptPal/node-sdk/commit/3e86fc2fda5bfb3f443d4551c6d28663743d6887))
+* **client:** add X-User-Id header support for execute and executeStream ([28d6a66](https://github.com/PromptPal/node-sdk/commit/28d6a665357d665349985dec8a1d54182cd2ca44))
+
+
+### Miscellaneous Chores
+
+* release 0.4.8 ([ac3ce08](https://github.com/PromptPal/node-sdk/commit/ac3ce08edc3fe2b5abdbd99a7d821a7665cba3fa))
+
 ## [0.4.7](https://github.com/PromptPal/node-sdk/compare/v0.4.6...v0.4.7) (2025-02-25)
 
 
